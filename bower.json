@@ -1,0 +1,14 @@
+{
+  "name": "paperbag-js-demo",
+  "version": "1.0.0",
+  "main": "",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "crypto-js": "http://crypto-js.googlecode.com/files/CryptoJS%20v3.1.2.zip",
+    "angular-ui-router": "~0.2.15",
+    "paperbag-js": "https://github.com/btinoco/paperbag.js.git",
+    "angular-material-icons": "~0.6.0",
+    "angular-material": "master",
+    "jquery": "~2.1.4"
+  }
+}

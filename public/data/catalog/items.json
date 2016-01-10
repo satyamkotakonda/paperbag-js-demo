@@ -1,0 +1,90 @@
+[
+  {
+    "id": "23454",
+    "name": "Fruit Mostachon",
+    "description": "Fruits",
+    "category": "12345",
+    "price": "29.00",
+    "image": "images/mostachon.png",
+    "icon": "images/mostachon.png",
+    "weight": "4.5"
+  },
+  {
+    "id": "23455",
+    "name": "Fruit Mostachon",
+    "description": "Strawberry",
+    "category": "12345",
+    "price": "25.00",
+    "image": "images/mostachon_strawberry.png",
+    "icon": "images/mostachon_strawberry.png",
+    "weight": "4.5"
+  },
+  {
+    "id": "23456",
+    "name": "Fruit Mostachon",
+    "description": "Mango",
+    "category": "12345",
+    "price": "25.00",
+    "image": "images/mostachon_mango.png",
+    "icon": "images/mostachon_mango.png",
+    "weight": "4.5"
+  },
+  {
+    "id": "23457",
+    "name": "Tiramisu",
+    "description": "Coffee Flavor",
+    "category": "12345",
+    "price": "17.47",
+    "image": "images/tiramisu.png",
+    "icon": "images/tiramisu.png",
+    "weight": "3.0"
+  },
+  {
+    "id": "34567",
+    "name": "Choco-Flan",
+    "description": "Flan and Cake",
+    "category": "67890",
+    "price": "15.19",
+    "image": "images/chocoflan.png",
+    "icon": "images/chocoflan.png",
+    "weight": "5.0"
+  },
+  {
+    "id": "12345",
+    "name": "Chocolate Chip",
+    "description": "Chocolate Chips",
+    "category": "23456",
+    "price": "5.00",
+    "image": "images/choco_cookies.png",
+    "icon": "images/choco_cookies.png",
+    "weight": "1.2",
+    "taxes": [
+      {
+        "description": "chocolate",
+        "rate": "4.5"
+      }
+    ]
+  },
+  {
+    "id": "12346",
+    "name": "Oat Cookies",
+    "description": "Oats and Raisins",
+    "category": "23456",
+    "price": "6.99",
+    "image": "images/oat_cookies.png",
+    "icon": "images/oat_cookies.png",
+    "taxable": true,
+    "weight": "1.2"
+  },
+  {
+    "id": "12347",
+    "name": "Test Item",
+    "description": "Test Item .99",
+    "category": "23456",
+    "price": "0.99",
+    "image": "images/test_item.png",
+    "icon": "images/test_item.png",
+    "taxable": false,
+    "weight": "1.2"
+  }
+]

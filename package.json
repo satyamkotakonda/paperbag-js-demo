@@ -1,0 +1,31 @@
+{
+  "name": "paperbag-js-demo",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bt96@bitbucket.org/bt96/paperbag-js-demo.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "paypal-rest-sdk": "^1.6.3",
+    "stripe": "^4.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "",
+  "homepage": "https://bitbucket.org/bt96/paperbag-js-demo#readme",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  },
+  "keywords": [],
+  "author": "btinoco <btinoco96@gmail.com> (btinoco.com)",
+  "license": "MIT"
+}

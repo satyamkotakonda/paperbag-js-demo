@@ -1,0 +1,108 @@
+<h3 class="md-padding">Cart</h3>
+
+<div layout="row" class="md-padding">
+
+    <div layout="column" flex="80">
+
+        <table class="md-padding table table-bordered table-striped table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th class="col-md-6 text-left">Product</th>
+                    <th class="col-md-2 text-left">Quantity</th>
+                    <th class="col-md-2 text-left">Price</th>
+                    <th class="col-md-2 text-left">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-if="cart.current.item.list.count() === 0">
+                    <td colspan="6">
+                        <h4 class="text-center">Your cart is currently empty!</h4>
+                    </td>
+                </tr>
+                <tr ng-repeat="item in cart.current.item.list.get()" ng-if="cart.current.item.list.count() > 0">
+                    <td>
+                        <md-button class="md-raised md-warn" ng-click="cart.removeItemFromCart(item.id())">
+                           <ng-md-icon icon="clear"></ng-md-icon>
+                        </md-button>
+                        &nbsp;
+                        <strong>{{item.name()}}</strong>
+                    </td>
+                    <td>
+                        <md-button class="md-raised"
+                                   ng-click="cart.decreaseQuantity(item.id())">
+                            -
+                        </md-button>
+                        <div class="quantity">
+                            {{item.quantity()}}
+                        </div>
+                        <md-button class="md-raised"
+                                   ng-click="cart.increaseQuantity(item.id())">
+                            +
+                        </md-button>
+                    </td>
+                    <td class="col-md-2 text-right">{{item.price() | currency}}</td>
+                    <td class="col-md-2 text-right">{{item.subtotal() | currency}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="col-md-6">&nbsp;</td>
+                    <td class="col-md-2">&nbsp;</td>
+                    <td class="col-md-2 text-right"><strong>Subtotal</strong></td>
+                    <td class="col-md-2 text-right">{{cart.current.subtotal() | currency}}</td>
+                </tr>
+                <tr>
+                    <td class="col-md-6">&nbsp;</td>
+                    <td class="col-md-2">&nbsp;</td>
+                    <td class="col-md-2 text-right"><strong>State Taxes</strong></td>
+                    <td class="col-md-2 text-right">{{cart.current.tax() | currency}}</td>
+                </tr>
+                <tr>
+                    <td class="col-md-6">&nbsp;</td>
+                    <td class="col-md-2">&nbsp;</td>
+                    <td class="col-md-2 text-right"><strong>Other Taxes</strong></td>
+                    <td class="col-md-2 text-right">{{cart.current.otherTax() | currency}}</td>
+                </tr>
+                <tr>
+                    <td class="col-md-6">&nbsp;</td>
+                    <td class="col-md-2">&nbsp;</td>
+                    <td class="col-md-2 text-right"><strong>Total</strong></td>
+                    <td class="col-md-2 text-right">{{cart.current.total() | currency}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <md-input-container>
+            <label>Discount:</label>
+            <input type="number"
+                   ng-keyup="cart.applyDiscount({amount:cart.discount.amount, type:cart.discount.type||1})"
+                   ng-model="cart.discount.amount"/>
+        </md-input-container>
+
+        <div layout="row">
+            <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppppcmcvdam.png"
+                 class="img-responsive" alt="Pay with PayPal, PayPal Credit or any major credit card"/>
+        </div>
+
+    </div>
+
+    <div layout="column" flex>
+
+        <md-button class="md-raised md-primary" ng-click="cart.toCatalog()">
+            Continue Shopping
+        </md-button>
+
+
+        <md-button class="md-raised md-primary" ng-click="cart.credit()">
+            Checkout...
+        </md-button>
+
+
+        <md-button class="md-button">
+            <img ng-src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
+                 style="width: 150px; height: 35px;" ng-click="cart.checkout()" alt="Check out with PayPal"/>
+        </md-button>
+
+    </div>
+
+</div>

@@ -1,0 +1,9 @@
+node_modules
+.idea
+app/controllers/webconfig.json
+public/libs
+public/config/config.json
+public/js/app.js
+public/js/app.min.js
+.DS_Store
+./**/.DS_Store

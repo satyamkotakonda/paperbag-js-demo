@@ -1,0 +1,42 @@
+<div layout="row" flex>
+
+    <md-sidenav class="md-sidenav-left md-whiteframe-3dp md-padding" md-is-locked-open="true">
+
+        <h2>Catalog</h2>
+
+        <md-divider></md-divider>
+
+        <md-button ng-repeat="category in catalog.categories"
+                   ng-click="catalog.search({category:category.id})">
+            {{category.name}}
+        </md-button>
+
+    </md-sidenav>
+
+    <div layout="column" class="md-padding">
+
+        <h3>Items</h3>
+
+        <div layout="row" flex layout-wrap>
+
+            <div layout="row" class="item" ng-repeat="item in catalog.items | filter:catalog.searchby:true">
+
+                <img ng-src="{{item.image}}"/>
+
+                <div>
+                    <strong>{{item.name}}</strong>
+                </div>
+
+                <h4 class="price">{{item.price |currency}}</h4>
+
+                <md-button class="md-raised md-primary" ng-click="catalog.addItemToCart(item,1)">
+                    Add To Cart
+                </md-button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

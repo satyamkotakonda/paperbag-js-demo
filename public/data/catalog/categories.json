@@ -1,0 +1,23 @@
+[
+  {
+    "id": "12345",
+    "name": "Cakes",
+    "description": "",
+    "enabled": true,
+    "limit": -1
+  },
+  {
+    "id": "67890",
+    "name": "Flans",
+    "description": "",
+    "enabled": true,
+    "limit": -1
+  },
+  {
+    "id": "23456",
+    "name": "Cookies",
+    "description": "",
+    "enabled": true,
+    "limit": -1
+  }
+]

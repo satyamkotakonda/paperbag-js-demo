@@ -1,0 +1,77 @@
+[
+  {
+    "intent": "sale",
+    "redirect_urls": {
+      "return_url": "http://localhost:63342/angular-paypal/index.html#/execute",
+      "cancel_url": "http://example.com/your_cancel_url/"
+    },
+    "payer": {
+      "payment_method": "paypal"
+    },
+    "transactions": [
+      {
+        "amount": {
+          "total": "2.00",
+          "currency": "USD"
+        },
+        "description": "This is a TEST paypal type payment 1!",
+        "item_list": {
+          "items": [
+            {
+              "quantity": "1",
+              "name": "item1",
+              "price": "1.00",
+              "currency": "USD"
+            },
+            {
+              "quantity": "1",
+              "name": "item2",
+              "price": "1.00",
+              "currency": "USD"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "intent": "sale",
+    "payer": {
+      "payment_method": "credit_card",
+      "funding_instruments": [
+        {
+          "credit_card": {
+            "number": "4417119669820331",
+            "type": "visa",
+            "expire_month": 11,
+            "expire_year": 2018,
+            "cvv2": "874",
+            "first_name": "darko",
+            "last_name": "tester",
+            "billing_address": {
+              "line1": "111 First Street",
+              "city": "Saratoga",
+              "state": "CA",
+              "postal_code": "95070",
+              "country_code": "US"
+            }
+          }
+        }
+      ]
+    },
+    "transactions": [
+      {
+        "amount": {
+          "total": "0.99",
+          "currency": "USD",
+          "details": {
+            "subtotal": "0.93",
+            "tax": "0.03",
+            "shipping": "0.03"
+          }
+        },
+        "description": "This is a TEST credit type payment!"
+      }
+    ]
+  }
+]
